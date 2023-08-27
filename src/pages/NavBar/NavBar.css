@@ -1,0 +1,13 @@
+.nav-bar-items{
+  color: #ffffff;
+  background-color:#17425A ;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-menu-overflow-item, .ant-menu-item ,.ant-menu-item-selected{
+  color: #ffffff;
+}
+.ant-menu-item-active{
+  color: #ffffff;
+}
