@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu } from 'antd';
+import { Menu, Avatar } from 'antd';
+import { AntDesignOutlined } from '@ant-design/icons';
 import { NavBarData } from './NavBarData';
 import './NavBar.css';
 
@@ -8,6 +9,7 @@ const NavbarItems = NavBarData.map((item, index) => ({
     icon: item.icon,
     label: item.title,
     path: item.path, 
+    cName:item.cName,
   }));
   const NavBar = () => {
     const [current, setCurrent] = useState('1'); // Initial selected key
@@ -31,9 +33,21 @@ const NavbarItems = NavBarData.map((item, index) => ({
             icon={item.icon}
             className='nav-bar-items'// Add 'active' class if current key matches
           >
-            <a href={item.path}>{item.label}</a>
+            <a className={item.cName} href={item.path}>{item.label}</a>
           </Menu.Item>
         ))}
+          <Menu.Item key="avatar" >
+          <Avatar
+    size={{
+      xs: 24,
+      sm: 32,
+      md: 40,
+      lg: 64,
+      xl: 80,
+      xxl: 100,
+    }}
+    icon={<AntDesignOutlined />}></Avatar>
+          </Menu.Item>
       </Menu>
     );
   };

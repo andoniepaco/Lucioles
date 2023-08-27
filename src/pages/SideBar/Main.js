@@ -7,7 +7,7 @@ import Dashboard from '../Dashboard/Dashboard';
 import MyInfo from '../MyInfo/MyInfo';
 import NavBar from '../NavBar/NavBar';
 
-const { Header, Footer, Sider } = Layout;
+const { Content, Header, Footer, Sider } = Layout;
 const menuItems = SidebarData.map((item, index) => ({
   key: String(index + 1),
   icon: item.icon,
@@ -23,7 +23,6 @@ const Main = () => {
     <Layout hasSider>
       <Sider
         style={{
-          overflow: 'auto',
           height: '100vh',
           position: 'fixed',
           left: 0,
@@ -39,7 +38,7 @@ const Main = () => {
         {/* <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={menuItems} /> */}
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} className='side-bar-list'>
             {menuItems.map((item) => (
-              <Menu.Item key={item.key} icon={item.icon}>
+              <Menu.Item key={item.key} icon={item.icon} className='side-bar-list'>
                 <NavLink to={item.path}>{item.label}</NavLink>
               </Menu.Item>
             ))}
@@ -57,40 +56,18 @@ const Main = () => {
           }}
         />
         <Content
+        className='content'
           style={{
-            margin: '24px 16px 0',
-            overflow: 'initial',
-          }}
-        >
-          {/* <div
-            style={{
-              padding: 24,
-              textAlign: 'center',
-            }}
-          >
-            <Routes>
-              <Route path="/dashboard">
-              </Route>
-            </Routes>
-          </div> */}
-        </Content>
-        <Footer
-          style={{
+            padding: 24,
             textAlign: 'center',
+            display: 'flex', // Use flexbox to align the content
+            flexDirection: 'column', // Stack content vertically
+            alignItems: 'center', // Center content horizontally
+            minHeight: '100vh', // Set a minimum height to fill the viewport
+                  
           }}
         >
-        Privacy Policy | Copyright C 2021 Lucioles Home Page | Powered by Lucioles Home Page
-        </Footer>
-      </Layout>
-    </Layout>
-    </Router>
-  );
-};
-export default Main;
-
-function Content(){
-  return <div>
-     <div
+          <div
             style={{
               padding: 24,
               textAlign: 'center',
@@ -107,5 +84,40 @@ function Content(){
               <Route path="/news" element={<Dashboard/>} />
             </Routes>
           </div>
-  </div>
-}
+        </Content>
+        <Footer
+        className='footer'
+          style={{
+            textAlign: 'center',
+          }}
+        >
+        Privacy Policy | Copyright C 2021 Lucioles Home Page | Powered by Lucioles Home Page
+        </Footer>
+      </Layout>
+    </Layout>
+    </Router>
+  );
+};
+export default Main;
+
+// function Content(){
+//   return <div>
+//      <div
+//             style={{
+//               padding: 24,
+//               textAlign: 'center',
+//             }}
+//           >
+//             <Routes>
+//               <Route path="/dashboard" element={<Dashboard/>} />
+//               <Route path="/myinfo" element={<MyInfo/>} />
+//               <Route path="/vacancies" element={<Dashboard/>} />
+//               <Route path="/reports" element={<Dashboard/>} />
+//               <Route path="/careerPlan" element={<Dashboard/>} />
+//               <Route path="/calendar" element={<Dashboard/>} />
+//               <Route path="/recruitment" element={<Dashboard/>} />
+//               <Route path="/news" element={<Dashboard/>} />
+//             </Routes>
+//           </div>
+//   </div>
+// }
