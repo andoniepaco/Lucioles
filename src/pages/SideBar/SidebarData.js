@@ -10,47 +10,47 @@ export const SidebarData = [
     {
         title: 'Dashboard',
         path: '/dashboard',
-        icon: <LuIcons.LuLayoutDashboard/>,
+        icon: <LuIcons.LuLayoutDashboard className='side-bar-icon'/>,
         cName: 'nav-text'
     },
     {
         title: 'My Info',
         path: '/myInfo',
-        icon: <AiIcons.AiOutlineInfoCircle/>,
+        icon: <AiIcons.AiOutlineInfoCircle className='side-bar-icon'/>,
         cName: 'nav-text'
     },
     {
         title: 'Vacancies',
         path: '/vacancies',
-        icon: <AiIcons.AiOutlineCheckCircle/>,
+        icon: <AiIcons.AiOutlineCheckCircle className='side-bar-icon'/>,
         cName: 'nav-text'
     },    {
         title: 'Reports',
         path: '/reports',
-        icon: <MdIcons.MdQueryStats/>,
+        icon: <MdIcons.MdQueryStats className='side-bar-icon'/>,
         cName: 'nav-text'
     },
     {
         title: 'Career Plan',
         path: '/careerPlan',
-        icon: <AiIcons.AiOutlineRise/>,
+        icon: <AiIcons.AiOutlineRise className='side-bar-icon'/>,
         cName: 'nav-text'
     },
     {
         title: 'Calendar',
         path: '/calendar',
-        icon: <BsIcons.BsCalendarCheck/>,
+        icon: <BsIcons.BsCalendarCheck className='side-bar-icon'/>,
         cName: 'nav-text'
     },    {
         title: 'Recruitment',
         path: '/recruitment',
-        icon: <BiIcons.BiUserCircle/>,
+        icon: <BiIcons.BiUserCircle className='side-bar-icon'/>,
         cName: 'nav-text'
     },
     {
         title: 'News',
         path: '/news',
-        icon: <BsIcons.BsNewspaper />,
+        icon: <BsIcons.BsNewspaper  className='side-bar-icon'/>,
         cName: 'nav-text'
     }
 ]

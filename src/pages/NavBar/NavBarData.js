@@ -5,20 +5,20 @@ export const NavBarData = [
     {
         title: 'Message',
         path: '/message',
-        icon: <AiIcons.AiOutlineMessage/>,
-        cName: 'navbar-item right'
+        icon: <AiIcons.AiOutlineMessage className='nav-bar-icon'/>,
+        cName: 'nav-bar-item'
     },
     {
         title: 'Notification',
         path: '/notification',
-        icon: <AiIcons.AiOutlineBell/>,
-        cName: 'navbar-item right'
+        icon: <AiIcons.AiOutlineBell className='nav-bar-icon'/>,
+        cName: 'nav-bar-item'
     },
     // {
     //     title: 'Edit',
     //     path: '/edit',
     //     icon: undefined,
-    //     cName: 'navbar-item'
+    //     cName: 'nav-bar-item'
     // }
     // const items = [
 //   {

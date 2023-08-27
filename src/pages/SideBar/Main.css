@@ -9,6 +9,9 @@
 .ant-layout-sider-children{
 background-color: #123345;
 }
+.ant-layout-sider{
+  overflow-x: hidden;
+}
 .ant-menu .ant-menu-root .ant-menu-inline .ant-menu-dark .css-dev-only-do-not-override-17a39f8{
   background-color: #123345;
 }
@@ -40,4 +43,36 @@ background-color: #123345;
   font-size: 1.2rem; 
   color: white;
 
+}
+.content{
+  background-color: #17425A;
+}
+.footer{
+  background-color: #17425A;
+  color: #ffffff;
+}
+/* .content{
+  min-height: '100vh' ;
+  padding: 24px;
+  text-align: 'center';
+  display: 'flex';
+  flex-direction: 'column';
+  align-items: 'center';
+} */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.side-bar-icon{
+  color: #DFDD54!important;
+}
+.side-bar-list:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px; /* Adjust this value to control the space */
+  bottom: 0;
+  width: 5px;
+  background-color: #DFDD54!important; /* Set the color you want */
 }
