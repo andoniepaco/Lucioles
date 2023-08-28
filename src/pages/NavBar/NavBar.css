@@ -11,6 +11,19 @@
 .ant-menu-item-active{
   color: #ffffff;
 }
+.ant-menu-item.ant-menu-item-only-child.nav-bar-items {
+  background-color: #17425A; 
+  color: #FFFFFF;
+  border-radius: 0;
+}
+.ant-menu.ant-menu-sub.ant-menu-vertical{
+  background: transparent;
+}
+.ant-menu.ant-menu-sub.ant-menu-vertical:hover{
+  background-color: #6C7D98;
+  border-radius: 0;
+  color: #FFFFFF;
+}
 
 /* .nav-bar-item.ant-menu-overflow-item.ant-menu-item.ant-menu-item-selected{
   color: #ffffff !important;

@@ -1,25 +1,27 @@
 import React from 'react';
-import { FiSearch } from 'react-icons/fi'; // Import the search icon from a library
-import './SearchBar.css';
-const SearchBar = ({ handleSearch }) => {
-  const handleInputChange = (event) => {
-    const searchQuery = event.target.value;
-    handleSearch(searchQuery); // Pass the search query to the parent component
-  };
+import { Select } from 'antd';
 
-  return (
-    <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Search"
-        onChange={handleInputChange}
-        className="search-input"
-      />
-      <div className="search-icon">
-        <FiSearch className='icon'/>
-      </div>
-    </div>
-  );
+const options = [];
+for (let i = 10; i < 36; i++) {
+  options.push({
+    value: i.toString(36) + i,
+    label: i.toString(36) + i,
+  });
+}
+
+const handleChange = (value) => {
+  console.log(`selected ${value}`);
 };
 
+const SearchBar = () => (
+  <Select
+    mode="tags"
+    style={{
+      width: '100%',
+    }}
+    onChange={handleChange}
+    tokenSeparators={[',']}
+    options={options}
+  />
+);
 export default SearchBar;
