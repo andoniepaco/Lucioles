@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-do
 import Dashboard from '../Dashboard/Dashboard';
 import MyInfo from '../MyInfo/MyInfo';
 import NavBar from '../NavBar/NavBar';
-
+import FooterComponent from '../../components/Footer/Footer';
 const { Content, Header, Footer, Sider } = Layout;
 const menuItems = SidebarData.map((item, index) => ({
   key: String(index + 1),
@@ -85,14 +85,15 @@ const Main = () => {
             </Routes>
           </div>
         </Content>
-        <Footer
+        <FooterComponent/>
+        {/* <Footer
         className='footer'
           style={{
             textAlign: 'center',
           }}
         >
         Privacy Policy | Copyright C 2021 Lucioles Home Page | Powered by Lucioles Home Page
-        </Footer>
+        </Footer> */}
       </Layout>
     </Layout>
     </Router>

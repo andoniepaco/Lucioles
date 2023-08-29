@@ -1,27 +1,28 @@
-import React from 'react';
-import { Select } from 'antd';
+// import React from 'react';
+// import { Input } from 'antd';
+// import { AudioOutlined } from '@ant-design/icons';
+// import './SearchBar.css'
+// const { Search } = Input;
+// const onSearch = (value) => console.log(value);
 
-const options = [];
-for (let i = 10; i < 36; i++) {
-  options.push({
-    value: i.toString(36) + i,
-    label: i.toString(36) + i,
-  });
-}
+// const suffix = (
+//   <AudioOutlined
+//     style={{
+//       fontSize: 16,
+//       color: '#1677ff',
+//     }}
+//   />
+// );
 
-const handleChange = (value) => {
-  console.log(`selected ${value}`);
-};
 
-const SearchBar = () => (
-  <Select
-    mode="tags"
-    style={{
-      width: '100%',
-    }}
-    onChange={handleChange}
-    tokenSeparators={[',']}
-    options={options}
-  />
-);
-export default SearchBar;
+// const SearchBar = () => (
+//   <Search
+//   placeholder="input search text"
+//   onSearch={onSearch}
+//   enterButton
+//     className="custom-search-bar"
+//     inputClassName="custom-input" 
+// />
+
+//   );
+// export default SearchBar;

@@ -11,13 +11,14 @@
 .ant-menu-item-active{
   color: #ffffff;
 }
-.ant-menu-item.ant-menu-item-only-child.nav-bar-items {
+.ant-menu-item.ant-menu-item-only-child.nav-bar-item {
   background-color: #17425A; 
   color: #FFFFFF;
   border-radius: 0;
 }
 .ant-menu.ant-menu-sub.ant-menu-vertical{
-  background: transparent;
+  /* background: transparent; */
+  background-color:  #17425A;
 }
 .ant-menu.ant-menu-sub.ant-menu-vertical:hover{
   background-color: #6C7D98;
@@ -49,3 +50,36 @@
   color: #ffffff !important;
 
 } */
+.search-bar{
+  margin-top: 5%;
+  border-radius: 14px; 
+  background-color: #FFFFFF80;
+}
+.spacer {
+  flex-grow: 1; /* Expands to fill the available space */
+}
+.search-bar input{
+  background-color: transparent;
+  color: #ffffff;
+}
+.search-bar > span{
+color: #ffffff;
+}
+
+.search-bar::placeholder{
+  color: black;
+  opacity: 1;
+}
+
+/* .nav-bar-items .ant-menu-item:hover,
+.nav-bar-items .ant-menu-submenu-title:hover {
+  color: white;
+  outline: none;
+  border: none; 
+} */
+.nav-bar-items .ant-menu-item-active > a:hover,
+.nav-bar-items .ant-menu-submenu-title:hover > a {
+  outline: none;
+  color: white;
+  border: none; /* You can also remove any border that might appear */
+}

@@ -11,7 +11,6 @@ const NavbarItems = NavBarData.map((item, index) => ({
     path: item.path, 
     cName:item.cName,
   }));
-  const { Search } = Input;
   const { SubMenu, Item } = Menu;
 
   const generateMenuItems = (items) => {
@@ -24,7 +23,7 @@ const NavbarItems = NavBarData.map((item, index) => ({
         );
       } else {
         return (
-          <Menu.Item key={item.key} icon={item.icon} defaultOpenKeys={[item.key]} className='nav-bar-items'>
+          <Menu.Item key={item.key} icon={item.icon} defaultOpenKeys={[item.key]} className='nav-bar-item'>
             <a className={item.cName} href={item.path}>{item.title}</a>
           </Menu.Item>
         );
@@ -49,11 +48,12 @@ const NavbarItems = NavBarData.map((item, index) => ({
       mode="horizontal"
       className="nav-bar-items"
     >
-      <Item key="search"  className="nav-bar-items">
-        <Search placeholder="Search" />
-      </Item>
+      <Menu.Item key="search" className="nav-bar-item">
+        <Input size="small" placeholder="Search"  className="search-bar" suffix={<SearchOutlined />} />
+      </Menu.Item>
+      <div className="nav-bar-item spacer" /> {/* Spacer for alignment */}
       {generateMenuItems(NavBarData)}
-      <Menu.Item key="avatar" className='nav-bar-items'>
+      <Menu.Item key="avatar" className='nav-bar-item'>
         <Avatar className="nav-bar-item" icon={<UserOutlined />} />
       </Menu.Item>
     </Menu>

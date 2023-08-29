@@ -1,0 +1,14 @@
+.card-item .ant-card-head{
+background-color: #0A293A;
+border-radius: 20px 20px 0 0;
+}
+
+.card-item .ant-card-body{
+    background: linear-gradient(122.37deg, #13394F 21.77%, #0A293A 78.23%);
+    border-radius: 0 0 20px 20px;
+
+}
+.ant-card.card-item{
+    background: transparent;
+    width: 100%; 
+}
