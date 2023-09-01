@@ -1,31 +1,28 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './Chart.css'
-
 const data = [
-  { name: 'Vacancy 1', value: 12 },
-  { name: 'Vacancy 2', value: 19 },
-  { name: 'Vacancy 3', value: 3 },
-  { name: 'Vacancy 4', value: 5 },
-  { name: 'Vacancy 5', value: 2 },
-  { name: 'Vacancy 6', value: 3 },
+  { name: '  ', yAxis: '  ' },
+  { name: 'Vacancy 1', yAxis: "Published", vacanyLevel:"Published" },
+  { name: 'Vacancy 2', yAxis: "Tested", vacanyLevel:"Screened" },
+  { name: 'Vacancy 3', yAxis: "Screened", vacanyLevel: "Candidate Found"},
+  { name: 'Vacancy 4', yAxis: "Posible Match", vacanyLevel:"Tested" },
+  { name: 'Vacancy 5', yAxis: "Candidate Found",vacanyLevel:"Posible Match" },
 ];
+
 
 const Chart = () => {
   return (
-    <div>
-      <p>Dashboard</p>
-      <p>How is your hiring going?</p>
-      <BarChart className='chart' width={500} height={300} data={data}>
+    <ResponsiveContainer className="chart-container"  height={300}>
+      <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+        <XAxis dataKey="name" />
+        <YAxis type="category" dataKey ="yAxis" />
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" interval={0} />
-        <YAxis dataKey="value" interval={0} />
-        {/* <YAxis /> */}
         <Tooltip />
         <Legend />
-        <Bar dataKey="value" fill="#8884d8" />
-      </BarChart>
-    </div>
+        <Line type="monotone" dataKey="vacanyLevel" stroke="#9fd3c7" />
+      </LineChart>
+    </ResponsiveContainer>
   );
 };
 

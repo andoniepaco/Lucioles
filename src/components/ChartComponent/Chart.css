@@ -1,3 +1,9 @@
-.chart{
-    font-size: 10px;
-}
+.recharts-cartesian-axis-tick-value {
+    fill: #ffffff; 
+  }
+  
+  .chart-container {
+    max-width: 500px; /* Set your desired maximum width */
+    margin: 0 auto;   /* Center the chart horizontally */
+  }
+  
