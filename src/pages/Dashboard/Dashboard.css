@@ -7,13 +7,42 @@
   
   .row {
     flex: 1;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     align-items: center;
     /* border: 1px solid #ccc; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
   }
-  
-  /* .col{
-    height: 33.3%;
-  } */
+  .dashboardHeader{
+    color: #ffffff;
+    text-align: left;
+  }
+.corporateTrainingBtn{
+    background-color: #DFDD54;
+    border-radius: 6px;
+    border: 0;
+    width: 100%;
+}  
+.trainingIcon{
+    margin-right: 10px;
+    color: #123345;
+}
+.tailorMadeBtn, .interviewingBtn{
+    background-color: #0A293A;
+    border-radius: 6px;
+    border: 0;
+    color: #ffffff;
+    font-size: 10px;
+    width: 45%;
+}
+.tailorMadeIcon, .interviewingIcon{
+   color: #DFDD53;
+   margin-right: 10px;
+}
+.row > * {
+    margin-bottom: 10px; /* Adjust the value to control the spacing */
+  }
   
